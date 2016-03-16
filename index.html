@@ -1,64 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Makea o no makea?</title>
-    <style>
-        body {
-            background: grey;
-            color: white;
-            font-family: Arial, helvetica, sans-serif;
-            text-align: center;
-            overflow: hidden;
-            height: 100vh;
-            width: 100vw;
-        }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Makeator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
-        .makea-text {
-            font-size: 6vw;
-        }
+    <link rel="stylesheet" href="./css/main.css" charset="utf-8">
 
-        .makea-text-big {
-            font-size: 10vw;
-        }
-
-        .makea {
-            background: forestgreen;
-        }
-
-        .no-makea {
-            background: orangered;
-        }
-
-        .not-sure {
-            background: url(./img/not-sure.svg);
-            background-size: cover;
-            background-position: center;
-        }
-
-    </style>
 </head>
 <body>
-    <h3 class="header">Makea o no makea?</h3>
-    <h1 class="makea-text">Loading if makea...</h1>
-    <h5 class="footer">Still not sure if makea? Press F5!</h5>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
-    <script>
-        setTimeout(function() {
-            var makeaObj = {
-                'makea': 'Makea',
-                'no-makea': 'No Makea',
-                'not-sure': 'Not Sure If Makea'
-            };
-            
-            var keys = Object.keys(makeaObj);
-            var makeaKey = keys[Math.floor(Math.random() * keys.length)];
-            var makeaValue = makeaObj[makeaKey];
+  <section>
+    <h3 class="header">makea or doesn't makea?</h3>
+    <h1 class="makea-text">try it!</h1>
+    <h5 class="footer">pull to find out!</h5>
+  </section>
+  <figure class="loading"></figure>
 
-            $('.makea-text').text(makeaValue);
-            $('body').addClass(makeaKey);
-            $makeaElem.addClass('makea-text-big');
-        }, 1000);
-    </script>
+  <script src="./js/jquery-2.2.1.min.js"></script>
+  <script src="./js/jquery.p2r.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
